@@ -17,13 +17,13 @@ public class InfestationConfig {
         ForgeConfigSpec.Builder builder = new ForgeConfigSpec.Builder();
         builder.push("infestation");
         SPAWN_CHANCE = builder
-                .comment("Chance (0.0 - 1.0) that silverfish spawn each time an infested entity takes damage. Vanilla 1.21 = 0.10")
-                .defineInRange("spawnChance", 0.10D, 0.0D, 1.0D);
+                .comment("Chance (0.0 - 1.0) that silverfish spawn each time an infested entity takes damage.")
+                .defineInRange("spawnChance", 0.30D, 0.0D, 1.0D); // تم جعلها 30%
         MAX_SILVERFISH = builder
-                .comment("Maximum silverfish spawned per trigger (1 to this value). Vanilla 1.21 = 2")
-                .defineInRange("maxSilverfish", 2, 1, 10);
+                .comment("Maximum silverfish spawned per trigger.")
+                .defineInRange("maxSilverfish", 10, 1, 20);
         builder.pop();
-
+        
         builder.push("water");
         CAMPFIRE_WATER_PROTECTION = builder
                 .comment("If true, flowing water cannot enter, pass through or put out campfires (they act like a wall for water).")
